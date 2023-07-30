@@ -11,8 +11,8 @@ func main() {
 	r := gin.Default()
 	r.LoadHTMLGlob("./templates/*")
 	r.GET("/",handlers.Home)
-	r.POST("/",handlers.SaveFileToDisk)
-	
+	r.POST("/",handlers.SaveToS3Bucket)
+
 	r.Run()
 
 }
